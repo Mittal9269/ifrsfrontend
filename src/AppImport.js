@@ -1,0 +1,26 @@
+import React from "react";
+
+export const MainHome = React.lazy(() => import("./Components/home/MainHome"));
+export const Footer = React.lazy(() => import("./Footer"));
+export const Error = React.lazy(() => import("./Error"));
+export const Form = React.lazy(() => import("./Components/From/Form"));
+export const Logout = React.lazy(() => import("./Components/Logout"));
+export const MessMenu = React.lazy(() => import("./Components/MessMenu/MessMenu"));
+export const MenuTable = React.lazy(() => import("./Components/Admin/MenuTable"));
+export const UserTable = React.lazy(() => import("./Components/Admin/UserTable"));
+export const PerdayFood = React.lazy(() => import("./Components/Admin/MenuShow/PerdayFood"));
+export const review2 = React.lazy(() => import("./Components/From/Review2"));
+export const UpdateMenu = React.lazy(() => import("./Components/MessMenu/UpdateMenu"));
+export const FormTable = React.lazy(() => import("./Components/Admin/FormTable"));
+export const RatingPerFood = React.lazy(() => import("./Components/MessMenu/RatingPerFood"));
+export const Static = React.lazy(() => import("./Components/Statistic/Static"));
+export const Blog = React.lazy(() => import("./Components/blogs/bloghome"));
+export const PerBlog = React.lazy(() => import("./Components/blogs/PerBlog"));
+export const NewBlog = React.lazy(() => import("./Components/blogs/newblog"));
+export const BlogPer = React.lazy(() => import("./Components/blogs/blogperuser"));
+export const Updateblog = React.lazy(() => import("./Components/blogs/updateblog"));
+export const Announcement = React.lazy(() => import("./Components/Admin/announcement/announcementhome"));
+export const NewAnnouncement = React.lazy(() => import("./Components/Admin/announcement/newannouncement"));
+export const UpdateAnnouncement = React.lazy(() => import("./Components/Admin/announcement/updateannouncement"));
+export const NewMenu = React.lazy(() => import("./Components/Admin/MenuShow/NewMenu"));
+export const PerAnnouncement = React.lazy(() => import("./Components/Admin/announcement/PerAnnouncement"));
