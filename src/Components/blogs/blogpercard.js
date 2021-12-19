@@ -1,8 +1,10 @@
 import React from 'react'
 import { NavLink } from "react-router-dom";
+import { useHistory } from 'react-router-dom';
 export default function Blogcard(props) {
 
     console.log(props)
+    const history = useHistory();
     const onDelete = id => {
         if (window.confirm('Are you sure to delete this record?')) {
             fetch(process.env.REACT_APP_BACKEND + "/blog/blog/" + id, {
@@ -12,8 +14,8 @@ export default function Blogcard(props) {
                     'Content-Type': 'application/json'
                 }
             }).then((res) => {
-                console.log("succesfully deleted")
-                window.location.reload();
+                // console.log("succesfully deleted")
+                history.push("/blogs"  );
             }).catch(err => console.log(err))
         }
     }

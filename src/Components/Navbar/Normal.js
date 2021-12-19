@@ -46,6 +46,7 @@ export default function Normal() {
 
     }
     const responseErrorGoogle = (response) => {
+        console.log(response)
         toast.error('Error from the Google Site', NotificationObject);
     }
 

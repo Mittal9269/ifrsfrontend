@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { NavLink } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import Image from "../../../assets/images/Admin_image.png"
+import { useHistory } from 'react-router-dom';
 
 export default function Announcementcard(props) {
 
@@ -9,6 +10,7 @@ export default function Announcementcard(props) {
     const [cookies, setCookie] = useCookies(['user']);
     const [commentlength, setCommentlength] = useState(0);
     const route = "/annnoucements/" + props.value._id;
+    const history = useHistory();
 
     useEffect(() => {
         if (cookies.jwttoken && cookies.ADMIN === "true") {
@@ -40,7 +42,8 @@ export default function Announcementcard(props) {
                 }
             }).then((res) => {
                 console.log("Succesfully Deleted!")
-                window.location.reload();
+                // window.location.reload();
+                history.push("/Announcement");
             }).catch(err => console.log(err))
         }
     }

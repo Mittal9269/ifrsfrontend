@@ -2,11 +2,13 @@ import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useCookies } from "react-cookie";
 import { fecthHeader } from "../style/Notification";
+import { useHistory } from "react-router-dom";
 
 export default function MenuCard(props) {
 
     const [checkadmin, setCheckadmin] = useState(true);
     const [cookies, setCookie] = useCookies(['user']);
+    const history = useHistory();
 
     useEffect(() => {
         if (cookies.jwttoken  && cookies.ADMIN === "true") {
@@ -24,7 +26,8 @@ export default function MenuCard(props) {
                 headers: fecthHeader
             }).then((res) => {
                 console.log("succesfully deleted")
-                window.location.reload();
+                // window.location.reload();
+                history.push("/menutable")
             }).catch(err => console.log(err))
         }
     }

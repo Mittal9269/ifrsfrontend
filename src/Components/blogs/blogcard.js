@@ -2,12 +2,14 @@ import React from 'react'
 import { useEffect,useState } from 'react';
 import { useCookies } from "react-cookie";
 import { NavLink } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 export default function Blogcard(props) {
     const [checkadmin, setCheckadmin] = useState(true);
     const [cookies, setCookie] = useCookies(['user']);
     const [commentlength , setCommentlength] = useState(0);
     const route = "/blogs/" + props.value._id;
+    const history = useHistory();
 
     useEffect(() => {
         if (cookies.jwttoken  && cookies.ADMIN === "true") {
@@ -39,7 +41,9 @@ export default function Blogcard(props) {
                 }
             }).then((res) => {
                 console.log("Succesfully Deleted!")
-                window.location.reload();
+                // window.location.reload();
+                history.push("/blogs");
+
             }).catch(err => console.log(err))
         }
     }

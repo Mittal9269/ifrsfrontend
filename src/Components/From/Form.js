@@ -117,6 +117,7 @@ export default function Form() {
                         dispatch(defaultformAction.ratingCheck(0));
                         setTimeout(() => {
                             window.location.reload();
+                            // history.push("/review");
                         }, 2000);
                     })
                     .catch(err => console.log(err))
