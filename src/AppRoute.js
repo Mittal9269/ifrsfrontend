@@ -43,7 +43,7 @@ export default function AppRoute() {
                         <Route exact path="/annnoucements/:id" component={PerAnnouncement} />
                         <Route exact path="/UpdateAnnouncement/:id" component={UpdateAnnouncement} />
                         <Route exact path="/logout" component={Logout} />
-                        <Route component={Error} />
+                        <Route path="/*" component={Error} />
                     </Switch>
 
                 </BrowserRouter>
