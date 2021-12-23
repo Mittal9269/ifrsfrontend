@@ -1,4 +1,5 @@
 import { MainHome, MenuTable, MessMenu, Form, review2, UserTable, Static, NewMenu, NewBlog, NewAnnouncement, PerBlog, PerdayFood, UpdateMenu, UpdateAnnouncement, Updateblog, RatingPerFood, FormTable, Blog, Logout, Announcement, BlogPer, Footer,PerAnnouncement } from "./AppImport";
+import Error from "./Error";
 
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import { VerticleButton as ScrollUpButton } from "react-scroll-up-button";
